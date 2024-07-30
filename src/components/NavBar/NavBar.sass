@@ -1,0 +1,47 @@
+@use './src/styles/variables'
+
+.Navbar
+  background-color: variables.$navbar-color
+
+.Navbar .logo
+  color: variables.$secondary-text
+  font-size: 30px
+  font-family: 'Roboto' 
+  font-weight: 700
+
+.Navbar .logo:hover
+  color: #40989e 
+  cursor: pointer
+
+.navlink
+  color: variables.$primary-text
+  margin-left: 25px
+  position: relative
+  padding-bottom: 0
+
+.navlink:hover
+  color: #ffffffad
+
+.navlink::after
+  content: ""
+  width: 0%
+  height: 1px
+  background-color: variables.$secondary-text
+  position: absolute
+  bottom: 0
+  left: 0
+  transition: 0.3s ease-in-out
+
+.navlink:hover::after
+  width: 100%
+
+.offcanvas
+  background-color: #09091694
+
+.btn-close
+  color: #ffff
+
+@media(max-width: 767px)
+  .nav-link
+    padding-top: 40px
+

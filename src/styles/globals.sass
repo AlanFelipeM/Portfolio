@@ -1,0 +1,49 @@
+@use 'variables'
+    
+*
+    padding: 0
+    margin: 0
+    font-family: variables.$font-stack
+    box-sizing: border-box
+
+body
+    background-color: variables.$body-bg-color
+
+
+    
+.pdr
+    min-height: 100vh
+    align-items: center
+
+.pdr1
+    background-color: variables.$bg-color
+
+.title
+    text-align: center
+    padding-top: 10rem
+    font-size: 3.8rem
+    color: variables.$primary-text
+
+
+::-webkit-scrollbar 
+  width: 6.5px
+
+
+::-webkit-scrollbar-thumb 
+  background: variables.$secondary-text
+  border-radius: 10px
+
+::-webkit-scrollbar-thumb:hover 
+  background: #4ec8d1e0
+
+
+@media(max-width: 1200px)
+  .title
+    font-size: 3.5rem
+
+@media(max-width: 1000px)
+  a
+    font-size: 12px
+    
+  .title
+      font-size: 3rem

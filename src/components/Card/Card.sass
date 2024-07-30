@@ -1,0 +1,298 @@
+@use './src/styles/variables'
+
+.Card
+  display: flex
+  margin-top: 7rem
+
+.reverse
+  flex-direction: row-reverse
+
+.Card img
+  padding-left: 1rem
+
+.img-card:first-child
+  padding-left: 0
+
+.Card .about-project
+  display: block
+  text-align: center
+  padding-top: 0
+
+.Card .titleproject
+  color: variables.$secondary-text
+  font-weight: 400
+
+.tec
+  display: flex
+  justify-content: center
+  color: variables.$primary-text
+
+.tec h3
+  font-size: 25px
+
+.Card .text 
+  margin-top: 20px
+  color: variables.$primary-text
+  margin-left: 8px
+
+.Card .tec h3
+  margin-left: 1rem
+  font-weight: 300
+
+.Card .tec:nth-child(2)
+  margin-left: 0rem
+  
+
+.Card .links
+  margin-top: 6.5rem
+  justify-content: center
+
+.Card .links a
+  margin-left: 6rem
+  color: variables.$secondary-text
+  text-decoration: none
+
+.links a:hover
+  color: #4ec8d19d
+
+.links a:first-child
+  margin-left: 0
+  
+
+.Card .html
+  background-color: variables.$html-color
+  border-radius: 50px
+  width: 11rem
+  transition: 0.4s ease-in-out
+  
+
+.Card .sass
+  background-color: variables.$sass-color
+  border-radius: 50px
+  width: 11rem
+  transition: 0.4s ease-in-out
+
+.Card .bootstrap
+  background-color: variables.$bootstrap-color
+  border-radius: 50px
+  width: 11rem
+  transition: 0.4s ease-in-out
+
+.js
+  background-color: variables.$js-color
+  border-radius: 50px
+  width: 11rem
+  transition: 0.4s ease-in-out
+
+.css
+  background-color: variables.$css-color
+  border-radius: 50px
+  width: 11rem
+  transition: 0.4s ease-in-out
+
+.text2 p
+  margin-top: 20px
+  color: variables.$primary-text
+  margin-right: 6px
+
+.petlife .sass
+  background-color: variables.$css-color
+  
+  
+
+.petlife .bootstrap
+  background-color: variables.$js-color
+  
+
+.gestor-estoque .sass
+  background-color: variables.$react-color
+
+.gestor-estoque .bootstrap
+  background-color: variables.$css-color
+  
+.gestor-estoque .tec
+  margin-left: 20px
+
+
+.html:hover
+  transition: 0.3s
+  transform: scale3d(1.1, 1.1, 1)
+
+.css:hover
+  transition: 0.3s
+  transform: scale3d(1.1, 1.1, 1)
+
+.sass:hover
+  transition: 0.3s
+  transform: scale3d(1.1, 1.1, 1)
+
+.bootstrap:hover
+  transition: 0.3s
+  transform: scale3d(1.1, 1.1, 1)
+
+.js:hover
+  transition: 0.3s
+  transform: scale3d(1.1, 1.1, 1)
+
+.img-card
+  width: 100%
+  transition: 0.4s ease-in-out
+  
+.img-card:hover
+  cursor: pointer
+  transform: scale3d(1.05, 1.05, 1)
+  filter: drop-shadow(12px 12px 8px black)
+  filter: grayscale(50%)
+  
+@media(max-width: 1400px)
+  .Card
+    width: 30rem
+    align-items: center
+
+  .Card .links
+    margin-top: 0
+
+@media(max-width: 1360px)
+  .Card
+    width: 30rem
+    align-items: center
+
+@media(max-width: 1203px)
+  .Card
+    width: 20rem
+    align-items: center
+
+@media(max-width: 1150px)
+  .Card
+    width: 26rem
+    align-items: center
+
+  .Card .tec
+    width: 30rem
+
+  .Card .tec h3
+    font-size: 20px
+
+  .Card p
+    font-size: 15px
+
+
+@media(max-width: 1000px)
+  .Card
+    width: 23rem
+    align-items: center
+
+  .Card .tec h3
+    font-size: 17px
+
+  .Card p
+    font-size: 15px
+    
+
+  
+@media(max-width: 994px)
+  .Card
+    width: 18rem
+    
+  .Card .tec h3
+    font-size: 17px
+
+  .Card p
+    font-size: 15px
+
+  .titleproject
+    font-size: 33px
+
+  .Card .links
+    font-size: 15px
+
+
+@media(max-width: 900px)  
+  .Card
+    width: 16rem
+
+  .Card .tec h3
+    font-size: 15px
+    width: 7rem
+
+  .Card p
+    font-size: 13px
+
+  .titleproject
+    font-size: 30px
+
+@media(max-width: 860px)  
+  .Card
+    flex-direction: column
+    margin: auto
+    margin-top: 60px
+    padding-top: 50px
+    padding-bottom: 70px
+    width: 40rem
+
+  .card2
+    flex-direction: column-reverse
+  
+  .Card .tec h3
+    font-size: 20px
+    width: 16rem
+    
+  .Card .tec
+    margin: auto
+
+  .Card p
+    font-size: 18px
+  
+  .Card .links i
+    font-size: 16px
+
+  .titleproject
+    font-size: 40px
+    margin-top: 28px
+    margin-bottom: 10px
+   
+
+@media(max-width: 814px)
+  .Card
+    width: 30rem
+  
+  .img-card
+    width: 30rem
+
+  .Card .tec h3
+    font-size: 20px
+    width: 16rem
+    
+  .Card .tec
+    margin: auto
+
+  .Card p
+    font-size: 16px
+
+@media(max-width: 600px)
+  .Card
+    width: 100%
+    margin: auto
+  
+  .img-card
+   width: 100%
+    margin: auto
+
+  .Card .tec h3
+    font-size: 16px
+    width: 100px
+    margin: auto
+    
+  .Card .tec
+   width: 100%
+    margin: auto
+
+  .Card p
+    font-size: 15px
+    width: 100%
+    margin: auto
+
+  
+
+  
+  

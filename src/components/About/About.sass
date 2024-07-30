@@ -1,0 +1,85 @@
+@use './src/styles/variables'
+ 
+.about
+    display: flex
+    align-items: center
+    padding-top: 90px
+    
+.txt-about
+    width: 43rem
+
+.txt-about h2
+    text-indent: 20px
+    font-weight: 200
+    font-size: 3.7rem
+    color: variables.$secondary-text
+    
+.txt-about p 
+    text-indent: 20px
+    color: variables.$primary-text
+
+.saying p
+    padding-top: 30px
+    text-indent: 20px
+    font-weight: 300
+    color: variables.$tertiary-text  
+
+.txt-about span
+    color: variables.$secondary-text
+
+.ass
+    margin-left: 38rem
+    font-weight: 300
+
+.eu
+    width: 26rem
+    margin-left: auto
+    justify-content: center
+
+
+@media(max-width: 1200px)
+    .eu
+        width: 27rem
+        margin-left: auto
+        justify-content: center
+
+@media(max-width: 1205px)
+    .eu
+        width: 17rem
+        margin-left: auto
+        justify-content: center
+
+    .ass
+        margin-left: auto
+
+@media(max-width: 1075px)
+    .eu
+        width: 17rem
+        margin-left: auto
+        justify-content: center
+
+    .txt-about
+        font-size: 13px
+
+@media(max-width: 1000px)
+    .about
+        justify-content: center
+        
+        
+@media(max-width: 768px)
+    .txt-about
+        font-size: 13px
+        width: auto
+
+    .about
+        display: block
+    
+    .eu
+        width: 25rem
+        margin: auto
+   
+@media(max-width: 615px)
+    .eu
+        display: none
+    
+       

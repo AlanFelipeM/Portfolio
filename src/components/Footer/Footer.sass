@@ -1,0 +1,63 @@
+@use './src/styles/variables'
+
+.contact-title
+    padding-top: 4rem
+
+.contact
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-top: 18px
+    
+.linkedin-contact
+    margin-left: 30px
+
+
+.github-contact
+    margin-left: 30px
+
+.contact a
+    text-decoration: none
+    text-align: center
+    color: variables.$primary-text
+
+.contact a:hover
+    color: #ffffffb0
+
+.assinatura
+    color: variables.$primary-text
+    text-align: center
+
+@media(max-width: 1000px)
+    .contact img
+        width: 30px
+
+    .assinatura
+        font-size: 15px
+
+
+@media(max-width: 768px)
+    .linkedin-contact
+        margin-left: 0px
+
+    .github-contact
+        margin-left: 0px
+
+    .contact
+        display: block
+        justify-content: center
+        width: 12rem
+        margin: auto
+
+    .linkedin-contact
+        padding-top: 2rem
+    
+    .github-contact
+        padding-top: 2rem
+
+@media(max-width: 600px)
+    .assinatura 
+        font-size: 12px
+        width: auto
+    
+        
