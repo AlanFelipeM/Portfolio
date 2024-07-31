@@ -13,7 +13,6 @@ export default function NavBar() {
       <Navbar sticky="top" key={expand} expand={expand} className='Navbar' data-bs-theme="dark">
         <Container>
         <Link 
-        smooth={true}
         to="Home"
         duration={1500}> 
 
@@ -33,21 +32,18 @@ export default function NavBar() {
               </Offcanvas.Header>
              <Offcanvas.Body>
              <Nav className="justify-content-end flex-grow-1 pe-3">
-             <Link  
-             smooth={true}             
+             <Link            
               to="Home" 
               duration={1500}>
             <Nav.Link className="navlink">Home</Nav.Link>
             </Link>
-            <Link 
-            smooth={true}             
+            <Link           
               to="About" 
               duration={1500}> 
             <Nav.Link className="navlink">Sobre</Nav.Link>
             </Link>
             
-            <Link   
-            smooth={true}           
+            <Link             
               to="Skills"  
               duration={1500}> 
             <Nav.Link className="navlink">Habilidades</Nav.Link>
@@ -55,7 +51,6 @@ export default function NavBar() {
             
             <Link  
             isDynamic={true}
-            smooth={true} 
               to="Projects" 
               duration={1500}> 
             <Nav.Link className="navlink">Projetos</Nav.Link>
@@ -63,7 +58,6 @@ export default function NavBar() {
             
             <Link 
             isDynamic={true}
-            smooth={true}
               to="Contact" 
               duration={1500}> 
             <Nav.Link className="navlink">Contato</Nav.Link>
