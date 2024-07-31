@@ -15,7 +15,6 @@ export default function NavBar() {
         <Link 
         to="Home"
         duration={1500}> 
-
       <Navbar.Brand className='logo'>/*Alan Dev*/</Navbar.Brand>
       </Link>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />  
@@ -26,7 +25,7 @@ export default function NavBar() {
               placement="end"
             >
             <Offcanvas.Header closeButton>
-                 <Offcanvas.Title className='logo' id={`offcanvasNavbarLabel-expand-${expand}`}>
+                 <Offcanvas.Title className='logo2' id={`offcanvasNavbarLabel-expand-${expand}`}>
                  /*Alan Dev*/
                 </Offcanvas.Title>
               </Offcanvas.Header>
