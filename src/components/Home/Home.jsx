@@ -3,6 +3,7 @@ import btngithub from '/src/img/mdi_github.png'
 import btnlinkedin from '/src/img/ri_linkedin-fill.png'
 import avatar from '/src/img/fotohome.png'
 import arrow from '/src/img/arrowDown.gif'
+import curriculo from '/src/img/Alan Felipe Bertoletti de Mário.pdf'
 import { useTypewriter} from 'react-simple-typewriter'
 import { Cursor } from 'react-simple-typewriter'
 
@@ -33,7 +34,7 @@ export default function Home () {
                 <a href="https://www.linkedin.com/in/alan-felipe-3666b3220/" target='_blank'><img className='linkedin' src={btnlinkedin} alt="img-linkedin" />LinkedIn</a>
                 </div>
         </div>
-        <button className='button-cv'><a href="/src/img/Alan Felipe Bertoletti de Mário.pdf" download>Download CV</a></button>
+        <button className='button-cv'><a href={curriculo} download>Download CV</a></button>
         </div>
         <img  className='avatar' src={avatar} alt="avatar"  />
         </Container>
