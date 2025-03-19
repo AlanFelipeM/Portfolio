@@ -1,8 +1,10 @@
 import Container from 'react-bootstrap/Container'
-
+import { useTranslation } from 'react-i18next';
 
 import '../Card/Card.sass'
+
 export default function Card2(props) {
+    const { t } = useTranslation();
     return (
         <>
          <Container>
@@ -16,7 +18,7 @@ export default function Card2(props) {
             </div>
             <div className='text2'><p>{props.abouttec}</p></div> 
             <div className='links'>
-                <a href={props.linkproject} target='_blank'><i>Link Projeto</i></a>
+                <a href={props.linkproject} target='_blank'><i>{t('linkProjeto')}</i></a>
                 <a href={props.linkgit} target='_blank'><i>Link GitHub</i></a>
                 </div>
             </div>

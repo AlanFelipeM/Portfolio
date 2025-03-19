@@ -2,15 +2,18 @@ import { Container } from "react-bootstrap"
 import email from "/src/img/email.png"
 import linkedin from "/src/img/linkedin.png"
 import github from "/src/img/github.png"
+import { useTranslation } from 'react-i18next';
 
 import "../Footer/Footer.sass"
 
 export default function Footer () {
+    const { t } = useTranslation();
+
     return (
         <>
         <Container>
         <div className="title contact-title">
-            <h1>- Contato -</h1>
+            <h1>{t('tituloContato')}</h1>
         </div>
         <div className="contact">
             <div className="email-contact">
@@ -34,7 +37,7 @@ export default function Footer () {
         </Container>
         <div className="assinatura">       
         <hr />   
-        <p>Desenvolvido por Alan Felipe  / Todos os direitos reservados © 2024</p>
+        <p>{t('rodape')}</p>
         </div>  
         </>
     )

@@ -10,6 +10,7 @@ import Modalvideo from '../Modal/Modalvideo';
 import Modalvideo2 from '../Modal/Modalvideo2'
 import Modalvideo3 from '../Modal/Modalvideo3'
 import Modalvideo4 from '../Modal/Modalvideo4'
+import { useTranslation } from 'react-i18next';
 
 import '../Projects/Projects.sass'
 
@@ -30,12 +31,14 @@ export default function Projects () {
   const [show4, setShow4] = useState(false);
   const handleClose4 = () => setShow4(false);
   const handleShow4 = () => setShow4(true);
-  
+
+  const { t } = useTranslation();
+
     return (
         <>
         <div className="pdr pdr1">
             <Container>
-               <h1 className="title">- Projetos -</h1>
+               <h1 className="title">{t('tituloProjetos')}</h1>
                 <Card 
                 event={handleShow}
                 img={alanx} 
@@ -43,7 +46,7 @@ export default function Projects () {
                 titletec1="HTML" 
                 titletec2="Sass" 
                 titletec3="Bootstrap"
-                abouttec="Projeto inspirado na SpaceX utilizando HTML, Sass e Bootstrap. O HTML estrutura o conteúdo, o Sass traz estilização eficiente e personalizada, e o Bootstrap garante um design responsivo e moderno. O site reflete a inovação da SpaceX, com uma interface limpa e visualmente impactante."
+                abouttec={t('projeto1')}
                 linkproject='https://alanx.netlify.app'
                 linkgit='https://github.com/AlanFelipeM/AlanX'
                 />
@@ -51,11 +54,11 @@ export default function Projects () {
                 <Card2
                 event={handleShow2}
                 img={select} 
-                title="Seleção de Personagens" 
+                title={t('tituloprojeto2')}
                 titletec1="HTML" 
                 titletec2="Css" 
                 titletec3="JavaScript"
-                abouttec="Uma pagina de seleção de personagens do One Piece utilizando HTML, CSS e JavaScript. O HTML estrutura o conteúdo, o CSS estiliza a interface com um design vibrante e temático, e o JavaScript permite a interação dinâmica dos usuários com a seleção dos personagens. O site oferece uma experiência divertida e envolvente para os fãs da série."
+                abouttec={t('projeto2')}
                 linkproject='https://alanfelipem.github.io/Projeto-OnePiece/'
                 linkgit='https://github.com/AlanFelipeM/Projeto-OnePiece'
                 />
@@ -64,11 +67,11 @@ export default function Projects () {
                 <Card 
                 event={handleShow3}
                 img={estoque} 
-                title="Gestor de Estoque" 
+                title={t('tituloprojeto3')} 
                 titletec1="HTML" 
                 titletec2="React" 
                 titletec3="Css"
-                abouttec="Um projeto de gestor de estoque usando HTML, CSS, React e Vite, com armazenamento no cache do Google. Os usuários podem adicionar, remover, editar e excluir itens facilmente. A interface é intuitiva e rápida, graças a HTML, CSS e React, com Vite acelerando o desenvolvimento. O cache do Google garante armazenamento seguro sem necessidade de backend robusto. Esta solução eficiente permite gerenciar inventários em tempo real, proporcionando uma ferramenta digital avançada para a gestão de estoques."
+                abouttec={t('projeto3')}
                 linkproject='https://gestor-estoque.netlify.app/'
                 linkgit='https://github.com/AlanFelipeM/Gestor-de-Estoque'
                 />
@@ -82,14 +85,14 @@ export default function Projects () {
                 titletec1="HTML" 
                 titletec2="Css" 
                 titletec3="JavaScript"
-                abouttec="Uma landing page para uma clínica veterinária utilizando HTML, CSS e JavaScript. O HTML organiza o conteúdo, o CSS oferece um design atraente e acolhedor, e o JavaScript adiciona interatividade e funcionalidades dinâmicas. A página destaca os serviços da clínica, apresenta a equipe de veterinários, proporcionando uma experiência informativa e envolvente para os donos de pets."
+                abouttec={t('projeto4')}
                 linkproject='https://alanfelipem.github.io/PetLife/'
                 linkgit='https://github.com/AlanFelipeM/PetLife'
                 />
                 </div>
 
                 <div className='ver-mais'>
-                    <a className="button-vermais" href="https://github.com/AlanFelipeM" target='blank'>Mais Projetos</a>
+                    <a className="button-vermais" href="https://github.com/AlanFelipeM" target='blank'>{t('botaoMais')}</a>
                     <br />
                     <br />
                     <br />

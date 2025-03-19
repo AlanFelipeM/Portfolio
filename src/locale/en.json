@@ -1,0 +1,30 @@
+{
+  "translation": {
+    "sobre": "About",
+    "habilidades": "Skills",
+    "projetos": "Projects",
+    "contato": "Contact",
+    
+    "apresentacao1": "Hello World, I am",
+    "apresentacao2": "Web/Software Developer",
+
+    "tituloSobre": "- About Me -",
+    "sobre1": "Hello,",
+    "sobre2": "My name is Alan Felipe and I am a young technology enthusiast and a Computer Engineering student.",
+    "sobre3": "Currently, I am a Starter at GFT as a software developer and a freelancer as a Front-End developer.",
+    "ditado": "Try once, twice, three times and if possible try the fourth, fifth and as many times as necessary. Just don't give up on the first attempts, persistence is the friend of conquest. If you want to get where most don't, do what most don't.",
+
+    "tituloProjetos": "- Projects -",
+    "projeto1": "Project inspired by SpaceX using HTML, Sass, and Bootstrap. HTML structures the content, Sass brings efficient and customized styling, and Bootstrap ensures a responsive and modern design. The site reflects SpaceX's innovation, with a clean and visually impactful interface.",
+    "tituloprojeto2": "Character Selection",
+    "projeto2": "A One Piece character selection page using HTML, CSS, and JavaScript. HTML structures the content, CSS styles the interface with a vibrant and thematic design, and JavaScript allows dynamic user interaction with character selection. The site offers a fun and engaging experience for fans of the series.",
+    "tituloprojeto3": "Stock Manager",
+    "projeto3": "A stock manager project using HTML, CSS, React, and Vite, with storage in Google's cache. Users can easily add, remove, edit, and delete items. The interface is intuitive and fast, thanks to HTML, CSS, and React, with Vite speeding up development. Google's cache ensures secure storage without the need for a robust backend. This efficient solution allows real-time inventory management, providing an advanced digital tool for stock management.",
+    "projeto4": "A landing page for a veterinary clinic using HTML, CSS, and JavaScript. HTML organizes the content, CSS offers an attractive and welcoming design, and JavaScript adds interactivity and dynamic functionalities. The page highlights the clinic's services, presents the veterinary team, providing an informative and engaging experience for pet owners.",
+    "botaoMais": "See more Projects",
+    "linkProjeto": "Project Link",
+
+    "tituloContato": "- Contact -",
+    "rodape": "Developed by Alan Felipe / All rights reserved © 2024"
+  }
+}

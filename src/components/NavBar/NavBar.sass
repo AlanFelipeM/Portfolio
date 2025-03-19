@@ -47,6 +47,63 @@
 .btn-close
   background-color: #4EC9D1
 
+.language-toggle
+  position: relative
+  width: 85px
+  height: 35px
+  background-color: #36353559
+  border-radius: 30px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 5px
+  cursor: pointer
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.527)
+  transition: background-color 0.3s
+
+.flag
+  width: 31px
+  height: 31px
+  transition: filter 0.3s, transform 0.3s
+
+.flag.brazil
+  filter: grayscale(100%)
+
+.flag.usa
+  filter: grayscale(100%)
+
+.flag.active
+  filter: none
+
+.toggle-switch
+  position: absolute
+  top: 2px
+  left: 2px
+  width: 26px
+  height: 26px
+  
+  border-radius: 50%
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+  transition: transform 0.3s
+
+.language-toggle.on .toggle-switch
+  transform: translateX(30px)
+
+.language-toggle.on .flag.brazil
+  filter: grayscale(100%)
+
+.language-toggle.on .flag.usa
+  filter: none
+
+.language-toggle.off .toggle-switch
+  transform: translateX(0)
+
+.language-toggle.off .flag.brazil
+  filter: none
+
+.language-toggle.off .flag.usa
+  filter: grayscale(100%)
+
 @media(max-width: 767px)
   .nav-link
     padding-top: 40px

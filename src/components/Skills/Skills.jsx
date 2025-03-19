@@ -13,6 +13,8 @@ import next from '/src/img/next.png'
 import node from '/src/img/node.png'
 import mongo from '/src/img/mongo.png'
 import mysql from '/src/img/mysql.png'
+import csharp from '/src/img/csharp.png'
+import dotnet from '/src/img/dotnet.png'
 import Tilt from 'react-parallax-tilt'
 
 import '../Skills/Skills.sass'
@@ -70,7 +72,6 @@ export default function Skills() {
             </div>
         </div>
 
-        <h2 className='title2'>Estudando</h2>
         <div className="studing">
             
             <div className="ts">
@@ -96,6 +97,16 @@ export default function Skills() {
             <div className="tecnologia"><Tilt>
             <img src={mysql} alt="mysql"/></Tilt>
             <p>Mysql</p>
+            </div>
+
+            <div className="tecnologia"><Tilt>
+            <img src={csharp} alt="C#"/></Tilt>
+            <p>C#</p>
+            </div>
+
+            <div className="tecnologia"><Tilt>
+            <img src={dotnet} alt=".Net"/></Tilt>
+            <p>.Net</p>
             </div>
         </div>
         </Container>

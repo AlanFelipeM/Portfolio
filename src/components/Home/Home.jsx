@@ -6,8 +6,10 @@ import arrow from '/src/img/arrowDown.gif'
 import curriculo from '/src/img/Alan Felipe Bertoletti de Mário.pdf'
 import { useTypewriter} from 'react-simple-typewriter'
 import { Cursor } from 'react-simple-typewriter'
+import { useTranslation } from 'react-i18next';
 
 import '../Home/Home.sass'
+import { Link } from 'react-scroll'
 
 export default function Home () {
     const [name] = useTypewriter({
@@ -16,6 +18,7 @@ export default function Home () {
         deleteSpeed: 90,
         loop: {}
     })
+    const { t } = useTranslation();
 
     return (
         <>
@@ -23,9 +26,9 @@ export default function Home () {
         <div className='pdr'>
        <Container md='auto' className="home">
         <div className='home1'>
-            <h3>Hello World, eu sou</h3>
+            <h3>{t('apresentacao1')}</h3>
             <h1> {name}<Cursor/></h1>
-            <h3>Desenvolvedor Web</h3>
+            <h3>{t('apresentacao2')}</h3>
         <div className='links'>
             <div className='btn-github'>
                 <a href="https://github.com/AlanFelipeM" target='_blank'><img className='github' src={btngithub} alt="img-github" />GitHub</a>
@@ -38,7 +41,9 @@ export default function Home () {
         </div>
         <img  className='avatar' src={avatar} alt="avatar"  />
         </Container>
-       <div className='text-center'><img src={arrow} alt="seta" className='arrowdown' /></div>
+       <Link to="About" smooth={true} duration={1000}>
+            <div className='text-center'><img src={arrow} alt="seta" className='arrowdown' /></div>
+            </Link>
        </div>
        
         </>

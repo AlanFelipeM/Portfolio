@@ -1,27 +1,37 @@
-import  React  from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import video from '/src/img/alax-video.mp4'
+import video from '/src/img/alax-video.mp4';
+import { CSSTransition } from 'react-transition-group';
+import '../Modal/Modal.sass';
 
-import '../Modal/Modal.sass'
-
-const Modalvideo = ({show, handleClose}) => {
-    return (
-        <Modal className="t-modal"
+const Modalvideo = ({ show, handleClose }) => {
+  return (
+    <CSSTransition
+      in={show}
+      timeout={300}
+      classNames="modal"
+      unmountOnExit
+    >
+      <Modal
+        className="t-modal"
         size="xl"
         aria-labelledby="contained-modal-title-vcenter"
-        centered show={show} onHide={handleClose}
-        >
+        centered
+        show={show}
+        onHide={handleClose}
+      >
         <Modal.Header closeButton>
-          <Modal.Title >AlanX</Modal.Title>
+          <Modal.Title>AlanX</Modal.Title>
         </Modal.Header>
-        <Modal.Body><video autoPlay width="100%" height="100%" controls>
-        <source src={video} type="video/mp4"/>
-        Opa, acho que o seu navegador nao suporta :/
-        </video>
-</Modal.Body>
+        <Modal.Body>
+          <video autoPlay width="100%" height="100%" controls>
+            <source src={video} type="video/mp4" />
+            Opa, acho que o seu navegador nao suporta :/
+          </video>
+        </Modal.Body>
         <Modal.Footer>
-        <Button className='btn-link' href='https://alanx.netlify.app' target='blank'>
+          <Button className='btn-link' href='https://alanx.netlify.app' target='blank'>
             Ver Projeto
           </Button>
           <Button className='close-modal' onClick={handleClose}>
@@ -29,7 +39,8 @@ const Modalvideo = ({show, handleClose}) => {
           </Button>
         </Modal.Footer>
       </Modal>
-    )
-}
+    </CSSTransition>
+  );
+};
 
-export default Modalvideo
+export default Modalvideo;
