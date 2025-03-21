@@ -33,9 +33,23 @@ export default function NavBar({ handleChangeLanguage, currentLanguage }) {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
+                  <Link to="Home" smooth={true} duration={1000}>
+                    <Nav.Link className="navlink">Home</Nav.Link>
+                  </Link>
+                  <Link to="About" smooth={true} duration={1000}>
+                    <Nav.Link className="navlink">{t('sobre')}</Nav.Link>
+                  </Link>
+                  <Link to="Skills" smooth={true} duration={1000}>
+                    <Nav.Link className="navlink">{t('habilidades')}</Nav.Link>
+                  </Link>
+                  <Link to="Projects" smooth={true} duration={1000}>
+                    <Nav.Link className="navlink">{t('projetos')}</Nav.Link>
+                  </Link>
+                  <Link to="Contact" smooth={true} duration={1000}>
+                    <Nav.Link className="navlink">{t('contato')}</Nav.Link>
+                  </Link>
 
-
-                <div
+                  <div
                     className={`language-toggle ${currentLanguage === 'en' ? 'on' : 'off'}`}
                     onClick={handleChangeLanguage}
                   >
@@ -52,21 +66,7 @@ export default function NavBar({ handleChangeLanguage, currentLanguage }) {
                     <div className="toggle-switch"></div>
                   </div>
 
-                  <Link to="Home" smooth={true} duration={1000}>
-                    <Nav.Link className="navlink">Home</Nav.Link>
-                  </Link>
-                  <Link to="About" smooth={true} duration={1000}>
-                    <Nav.Link className="navlink">{t('sobre')}</Nav.Link>
-                  </Link>
-                  <Link to="Skills" smooth={true} duration={1000}>
-                    <Nav.Link className="navlink">{t('habilidades')}</Nav.Link>
-                  </Link>
-                  <Link to="Projects" smooth={true} duration={1000}>
-                    <Nav.Link className="navlink">{t('projetos')}</Nav.Link>
-                  </Link>
-                  <Link to="Contact" smooth={true} duration={1000}>
-                    <Nav.Link className="navlink">{t('contato')}</Nav.Link>
-                  </Link>
+
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
