@@ -6,13 +6,13 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.05)
   transition: all 0.3s ease
   padding: 0.8rem 0
+  overflow-x: hidden // Added to prevent line bleed
+  width: 100%
 
 .logo
   color: variables.$secondary-text !important
   font-size: 1.8rem !important
-  font-family: 'Roboto' 
-  font-weight: 700
-  transition: color 0.3s ease
+  white-space: nowrap
   
   &:hover
     color: #40989e !important
@@ -33,15 +33,17 @@
     gap: 5px
     width: 30px
     height: 30px
+    position: relative // Added positioning context
 
     &::before, &::after, span
       content: ""
-      width: 100%
+      width: 30px // Fixed width
       height: 2px
       background-color: variables.$secondary-text
       transition: all 0.3s ease
       position: absolute
       left: 0
+      display: block
 
     span
       top: 50%
