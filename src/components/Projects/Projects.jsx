@@ -3,8 +3,8 @@ import Container from 'react-bootstrap/Container'
 import Card from '../Card/Card'
 import Card2 from '../Card/Card2'
 import alanx from '/src/img/alanx.png'
-import select from '/src/img/select.png'
-import petlife from '/src/img/petlife.png'
+import select from '/src/img/vexeltech.png'
+import gofix from '/src/img/gofix.png'
 import estoque from '/src/img/estoque.png'
 import Modalvideo from '../Modal/Modalvideo';
 import Modalvideo2 from '../Modal/Modalvideo2'
@@ -53,15 +53,15 @@ export default function Projects() {
                     />
 
                     <Card2
-                        event={handleShow2}
+                        event={null}
                         img={select}
                         title={t('tituloprojeto2')}
-                        titletec1="HTML"
-                        titletec2="Css"
-                        titletec3="JavaScript"
+                        titletec1="React"
+                        titletec2="Tailwind"
+                        titletec3="TypeScript"
                         abouttec={t('projeto2')}
-                        linkproject='https://alanfelipem.github.io/Projeto-OnePiece/'
-                        linkgit='https://github.com/AlanFelipeM/Projeto-OnePiece'
+                        linkproject='https://vexeltech.com.br/'
+                        linkgit='https://github.com/AlanFelipeM'
                     />
 
                     <Card
@@ -77,15 +77,15 @@ export default function Projects() {
                     />
 
                     <Card2
-                        event={handleShow4}
-                        img={petlife}
-                        title="PetLife"
-                        titletec1="HTML"
-                        titletec2="Css"
-                        titletec3="JavaScript"
+                        event={null}
+                        img={gofix}
+                        title={t('tituloprojeto4')}
+                        titletec1="Flutter"
+                        titletec2="Dart"
+                        titletec3=""
                         abouttec={t('projeto4')}
-                        linkproject='https://alanfelipem.github.io/PetLife/'
-                        linkgit='https://github.com/AlanFelipeM/PetLife'
+                        linkproject='https://gofiix.netlify.app/'
+                        linkgit='https://github.com/AlanFelipeM'
                     />
                 </div>
 

@@ -26,114 +26,54 @@
 .tec
   display: flex
   justify-content: center
+  gap: 1rem
   color: variables.$primary-text
+  margin-top: 1.5rem
 
-.tec h3
-  font-size: 25px
+  h3
+    font-size: 1.2rem
+    font-weight: 300
+    border-radius: 50px
+    width: 9rem
+    padding: 0.3rem 0
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    text-align: center
+    cursor: default
 
-.Card .text 
-  margin-top: 20px
-  color: variables.$primary-text
-  margin-left: 8px
+    &:hover
+      transform: translateY(-3px) scale(1.05)
+      filter: brightness(1.2)
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3)
 
-.Card .tec h3
-  margin-left: 1rem
-  font-weight: 300
-
-.Card .tec:nth-child(2)
-  margin-left: 0rem
-  
-
-.Card .links
-  margin-top: 6.5rem
-  justify-content: center
-
-.Card .links a
-  margin-left: 6rem
-  color: variables.$secondary-text
-  text-decoration: none
-
-.links a:hover
-  color: #4ec8d19d
-
-.links a:first-child
-  margin-left: 0
-  
-
-.Card .html
-  background-color: variables.$html-color
-  border-radius: 50px
-  width: 11rem
-  transition: 0.4s ease-in-out
-  
-
-.Card .sass
-  background-color: variables.$sass-color
-  border-radius: 50px
-  width: 11rem
-  transition: 0.4s ease-in-out
-
-.Card .bootstrap
-  background-color: variables.$bootstrap-color
-  border-radius: 50px
-  width: 11rem
-  transition: 0.4s ease-in-out
-
-.js
-  background-color: variables.$js-color
-  border-radius: 50px
-  width: 11rem
-  transition: 0.4s ease-in-out
-
-.css
-  background-color: variables.$css-color
-  border-radius: 50px
-  width: 11rem
-  transition: 0.4s ease-in-out
-
-.text2 p
-  margin-top: 20px
-  color: variables.$primary-text
-  margin-right: 6px
-
-.petlife .sass
-  background-color: variables.$css-color
-  
-  
-
-.petlife .bootstrap
-  background-color: variables.$js-color
-  
-
-.gestor-estoque .sass
-  background-color: variables.$react-color
-
-.gestor-estoque .bootstrap
-  background-color: variables.$css-color
-  
-.gestor-estoque .tec
-  margin-left: 20px
-
-
-.html:hover
-  transition: 0.3s
-  transform: scale3d(1.1, 1.1, 1)
-
-.css:hover
-  transition: 0.3s
-  transform: scale3d(1.1, 1.1, 1)
-
-.sass:hover
-  transition: 0.3s
-  transform: scale3d(1.1, 1.1, 1)
-
-.bootstrap:hover
-  transition: 0.3s
-  transform: scale3d(1.1, 1.1, 1)
-
-.js:hover
-  transition: 0.3s
-  transform: scale3d(1.1, 1.1, 1)
+    &.html
+      background-color: variables.$html-color
+    &.css
+      background-color: variables.$css-color
+    &.javascript
+      background-color: variables.$js-color
+      color: #000
+    &.sass
+      background-color: variables.$sass-color
+    &.bootstrap
+      background-color: variables.$bootstrap-color
+    &.react
+      background-color: variables.$react-color
+      color: #000
+    &.typescript
+      background-color: variables.$typescript-color
+    &.tailwind
+      background-color: variables.$tailwind-color
+      color: #000
+    &.github
+      background-color: variables.$github-color
+    &.nextjs, &.next.js
+      background-color: variables.$nextjs-color
+    &.nodejs, &.node.js
+      background-color: variables.$node-color
+    &.flutter
+      background-color: variables.$flutter-color
+    &.dart
+      background-color: variables.$dart-color
 
 .img-card
   width: 100%
