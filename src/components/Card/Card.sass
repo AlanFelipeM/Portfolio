@@ -134,98 +134,63 @@
   border-color: variables.$secondary-text
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 20px rgba(78, 201, 209, 0.2)
   
-@media(max-width: 1400px)
+@media(max-width: 1200px)
   .Card
+    gap: 2rem
+    .titleproject
+      font-size: 2.5rem
+
+@media(max-width: 991px)
+  .Card
+    flex-direction: column !important
+    text-align: center
     width: 100%
-    max-width: 1200px
-    margin-left: auto
-    margin-right: auto
-    align-items: center
-
-@media(max-width: 900px)  
-  .Card
-    width: 16rem
-
-  .Card .tec h3
-    font-size: 15px
-    width: 7rem
-
-  .Card p
-    font-size: 13px
-
-  .titleproject
-    font-size: 30px
-
-@media(max-width: 860px)  
-  .Card
-    flex-direction: column
-    margin: auto
-    margin-top: 60px
-    padding-top: 50px
-    padding-bottom: 70px
-    width: 40rem
-
-  .card2
-    flex-direction: column-reverse
-  
-  .Card .tec h3
-    font-size: 20px
-    width: 16rem
+    gap: 2rem
+    margin-top: 6rem
     
-  .Card .tec
-    margin: auto
+    .about-project
+      text-align: center
+      align-items: center
+      order: 2
 
-  .Card p
-    font-size: 18px
-  
-  .Card .links i
-    font-size: 16px
+    .titleproject
+      font-size: 2.2rem
+      margin-top: 1.5rem
 
-  .titleproject
-    font-size: 40px
-    margin-top: 28px
-    margin-bottom: 10px
-   
+    .tec
+      justify-content: center
+      flex-wrap: wrap
+      gap: 1rem
 
-@media(max-width: 814px)
-  .Card
-    width: 30rem
-  
-  .img-card
-    width: 30rem
+    .text, .text2 p
+      text-align: center
+      font-size: 1rem
+      max-width: 100%
 
-  .Card .tec h3
-    font-size: 20px
-    width: 16rem
+    .links
+      justify-content: center
+      gap: 2rem
+      margin-top: 2rem
+
+    .img-card
+      order: 1
+      max-width: 100%
+      max-height: 350px
+
+@media(max-width: 480px)
+  .Card 
+    margin-top: 4rem
+    .titleproject
+      font-size: 1.8rem
     
-  .Card .tec
-    margin: auto
+    .tec h3
+      width: 7rem
+      font-size: 0.9rem
 
-  .Card p
-    font-size: 16px
-
-@media(max-width: 600px)
-  .Card
-    width: 100%
-    margin: auto
-  
-  .img-card
-   width: 100%
-    margin: auto
-
-  .Card .tec h3
-    font-size: 16px
-    width: 100px
-    margin: auto
-    
-  .Card .tec
-   width: 100%
-    margin: auto
-
-  .Card p
-    font-size: 15px
-    width: 100%
-    margin: auto
+    .links
+      flex-direction: column
+      gap: 1rem
+      align-items: center
 
   
 

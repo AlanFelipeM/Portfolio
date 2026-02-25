@@ -16,7 +16,11 @@ export default function NavBar({ handleChangeLanguage, currentLanguage }) {
         <Navbar sticky="top" key={expand} expand={expand} className="Navbar" data-bs-theme="dark">
           <Container>
             <Navbar.Brand as={NavLink} to="/" className="logo">/*Alan Dev*/</Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}>
+              <span className='navbar-toggler-icon'>
+                <span></span>
+              </span>
+            </Navbar.Toggle>
             <Navbar.Offcanvas
               className="offcanvas"
               id={`offcanvasNavbar-expand-${expand}`}

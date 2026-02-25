@@ -18,6 +18,50 @@
     color: #40989e !important
     cursor: pointer
 
+.navbar-toggler
+  border: none !important
+  padding: 0
+  
+  &:focus
+    box-shadow: none !important
+
+  .navbar-toggler-icon
+    background-image: none !important
+    display: flex
+    flex-direction: column
+    justify-content: center
+    gap: 5px
+    width: 30px
+    height: 30px
+
+    &::before, &::after, span
+      content: ""
+      width: 100%
+      height: 2px
+      background-color: variables.$secondary-text
+      transition: all 0.3s ease
+      position: absolute
+      left: 0
+
+    span
+      top: 50%
+      transform: translateY(-50%)
+
+    &::before
+      top: 0
+    
+    &::after
+      bottom: 0
+
+  &[aria-expanded="true"]
+    .navbar-toggler-icon
+      span
+        opacity: 0
+      &::before
+        transform: translateY(14px) rotate(45deg)
+      &::after
+        transform: translateY(-14px) rotate(-45deg)
+
 .navlink
   color: variables.$primary-text !important
   margin: 0 1rem
@@ -45,11 +89,22 @@
     width: 100%
 
 .offcanvas
-  background-color: rgba(9, 9, 22, 0.95) !important
-  backdrop-filter: blur(10px)
+  background-color: variables.$bg-color !important
+  backdrop-filter: blur(20px)
+  border-left: 1px solid rgba(255, 255, 255, 0.1) !important
+  width: 280px !important
+
+  .offcanvas-header
+    padding: 2rem
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05)
+
+  .offcanvas-body
+    padding: 2rem
 
 .btn-close
-  background-color: #4EC9D1 !important
+  background-color: variables.$secondary-text !important
+  opacity: 1 !important
+  box-shadow: 0 0 10px rgba(78, 201, 209, 0.5)
 
 .language-toggle
   position: relative
