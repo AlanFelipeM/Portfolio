@@ -1,23 +1,26 @@
 {
   "translation": {
-    
     "sobre": "Sobre",
     "habilidades": "Habilidades",
+    "habilidades_titulo": "Minha Stack",
+    "front_level_title": "Front-End Developer",
+    "front_level_desc": "80% pronto para nível Pleno",
+    "fullstack_level_title": "Full Stack",
+    "fullstack_level_desc": "Junior forte / Pleno em evolução",
+    "cat_frontend": "Front-End",
+    "cat_backend": "Back-End",
+    "cat_tools": "Ferramentas & DevOps",
+    "cat_database": "Banco de Dados",
     "projetos": "Projetos",
     "contato": "Contato",
-
-    
     "apresentacao1": "Hello World, eu sou",
     "apresentacao2": "Desenvolvedor Web/Software",
-
-
     "tituloSobre": "- Sobre Mim -",
     "sobre1": "Olá,",
-    "sobre2": "Meu nome é Alan Felipe e sou um jovem apaixonado por tecnologia e estudante de Engenharia da Computação. ",
-    "sobre3": "Atualmente sou Starter na GFT como desenvolvedor de software e freelancer como dev Front-End.",
+    "sobre2": "Desenvolvedor Front End com foco na criação de aplicações web modernas, escaláveis e orientadas à experiência do usuário. Atuo com React, Next.js, JavaScript e TypeScript, desenvolvendo interfaces responsivas, performáticas e bem estruturadas.",
+    "sobre3": "Possuo experiência em integrações com APIs REST e apoio no desenvolvimento back end utilizando Java e SQL, além de trabalhar com soluções como Supabase para autenticação e banco de dados. Também aplico automações e integrações de processos utilizando n8n.",
+    "sobre4": "Tenho vivência em ambientes ágeis e foco em qualidade, eficiência e entrega de soluções que geram valor ao negócio.",
     "ditado": "Tente uma, duas, três vezes e se possível tente a quarta, a quinta e quantas vezes for necessário. Só não desista nas primeiras tentativas, a persistência é amiga da conquista. Se você quer chegar aonde a maioria não chega, faça o que a maioria não faz.",
-
-
     "tituloProjetos": "- Projetos -",
     "projeto1": "Projeto inspirado na SpaceX utilizando HTML, Sass e Bootstrap. O HTML estrutura o conteúdo, o Sass traz estilização eficiente e personalizada, e o Bootstrap garante um design responsivo e moderno. O site reflete a inovação da SpaceX, com uma interface limpa e visualmente impactante.",
     "tituloprojeto2": "Seleção de Personagens",
@@ -27,10 +30,7 @@
     "projeto4": "Uma landing page para uma clínica veterinária utilizando HTML, CSS e JavaScript. O HTML organiza o conteúdo, o CSS oferece um design atraente e acolhedor, e o JavaScript adiciona interatividade e funcionalidades dinâmicas. A página destaca os serviços da clínica, apresenta a equipe de veterinários, proporcionando uma experiência informativa e envolvente para os donos de pets.",
     "botaoMais": "Ver mais Projetos",
     "linkProjeto": "Link Projeto",
-
-
     "tituloContato": "- Contato -",
     "rodape": "Desenvolvido por Alan Felipe  / Todos os direitos reservados © 2024"
-
   }
 }

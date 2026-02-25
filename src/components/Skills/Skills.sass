@@ -1,43 +1,179 @@
-@use './src/styles/variables'
+@use '../../styles/variables'
 
-.skill
+.skills-page
+    min-height: 100vh
     display: flex
-    text-align: center
-    color: variables.$primary-text
-    padding-top: 10rem
-    justify-content: center
+    flex-direction: column
+    padding: 6rem 0
+    position: relative
+    overflow: hidden
 
+.skills-container
+    position: relative
 
-.tecnologia
-    margin-left: 68px
-    
-
-.title2
-    text-align: center
-    color: variables.$primary-text
-    padding-top: 6rem
-
-.studing
+.skills-sections-wrapper
     display: flex
+    flex-direction: column
+    gap: 4rem
+    margin-top: 3rem
+
+.skills-section
+    .section-subtitle
+        color: variables.$primary-text
+        font-size: 1.6rem
+        margin-bottom: 2.5rem
+        font-weight: 600
+        position: relative
+        padding-left: 1.2rem
+        
+        &::before
+            content: ''
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            width: 4px
+            height: 24px
+            background: variables.$secondary-text
+            border-radius: 2px
+
+.skills-grid
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr))
+    gap: 3rem 2rem
+    
+    @media (max-width: 576px)
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr))
+        gap: 2rem 1.2rem
+
+.skill-card
     text-align: center
-    color: variables.$primary-text
-    padding-top: 3rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 1rem
+    
+    &:hover
+        .skill-icon-wrapper
+            transform: scale(1.05)
+            border-color: variables.$secondary-text
+            box-shadow: 0 0 20px rgba(78, 201, 209, 0.2)
+            
+            img, .skill-icon-svg
+                filter: grayscale(0) drop-shadow(0 0 8px rgba(255,255,255,0.2))
+            
+            .skill-ring .ring-fill
+                opacity: 1
+                stroke-dashoffset: 0 // Optional: can animate this
+            
+            .skill-percent
+                opacity: 1
+                transform: translate(-50%, -50%) scale(1.1)
+
+        p
+            color: variables.$primary-text
+            opacity: 1
+
+    p
+        color: variables.$primary-text
+        font-size: 0.95rem
+        font-weight: 500
+        opacity: 0.6
+        transition: all 0.3s ease
+
+.skill-icon-wrapper
+    width: 100px
+    height: 100px
+    background: rgba(23, 23, 48, 0.6)
+    backdrop-filter: blur(8px)
+    border-radius: 50%
+    display: flex
+    align-items: center
     justify-content: center
+    padding: 1.8rem
+    border: 1px solid rgba(255, 255, 255, 0.05)
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3)
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    position: relative
 
+    @media (max-width: 576px)
+        width: 85px
+        height: 85px
+        padding: 1.5rem
 
+    img
+        width: 100%
+        height: 100%
+        object-fit: contain
+        filter: grayscale(0.4)
+        transition: all 0.3s ease
+        z-index: 2
 
-@media(max-width: 1300px)
-    .skill
-        flex-wrap: wrap
-    
-    .studing
-        flex-wrap: wrap
+    .skill-icon-svg
+        width: 100%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 3rem
+        filter: grayscale(0.4)
+        transition: all 0.3s ease
+        z-index: 2
 
-@media(max-width: 500px)
-    .tecnologia
-        margin-left: 1.5rem
-
-    
+    .skill-placeholder
+        width: 100%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        background: linear-gradient(135deg, rgba(78, 201, 209, 0.1), rgba(136, 18, 252, 0.1))
+        border-radius: 50%
+        z-index: 2
         
-        
-    
+        span
+            font-size: 1.8rem
+            font-weight: 700
+            color: variables.$secondary-text
+            text-transform: uppercase
+
+    .skill-ring
+        position: absolute
+        top: -5px
+        left: -5px
+        width: calc(100% + 10px)
+        height: calc(100% + 10px)
+        transform: rotate(-90deg)
+        pointer-events: none
+        z-index: 1
+
+        circle
+            fill: none
+            stroke-width: 4
+            stroke-linecap: round
+
+        .ring-bg
+            stroke: rgba(255, 255, 255, 0.05)
+
+        .ring-fill
+            stroke: variables.$secondary-text
+            opacity: 0.5
+            transition: all 0.6s ease
+            stroke-dasharray: 283
+            stroke-dashoffset: 0 
+
+    .skill-percent
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background: rgba(23, 23, 48, 0.9)
+        color: white
+        font-size: 0.75rem
+        font-weight: 700
+        padding: 2px 6px
+        border-radius: 10px
+        opacity: 0
+        transition: all 0.3s ease
+        z-index: 10
+        border: 1px solid variables.$secondary-text
+        white-space: nowrap
