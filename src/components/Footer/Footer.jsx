@@ -6,39 +6,36 @@ import { useTranslation } from 'react-i18next';
 
 import "../Footer/Footer.sass"
 
-export default function Footer () {
+export default function Footer() {
     const { t } = useTranslation();
 
     return (
-        <>
-        <Container>
-        <div className="title contact-title">
-            <h1>{t('tituloContato')}</h1>
-        </div>
-        <div className="contact">
-            <div className="email-contact">
-                <a href="mailto:alanfelipe1678@gmail.com" target="blank">
-                    <img src={email} alt="" />alanfelipe1678@gmail.com
+        <div className='contact-section'>
+            <Container className="contact-container">
+                <h1 className="title">// {t('tituloContato')}</h1>
+
+                <div className="contact-grid">
+                    <a href="mailto:alanfelipe1678@gmail.com" target="blank" className="contact-item">
+                        <img src={email} alt="Email" />
+                        <span>alanfelipe1678@gmail.com</span>
                     </a>
-            </div>
 
-            <div className="linkedin-contact">
-                <a href="https://www.linkedin.com/in/alan-felipe-3666b3220" target="_blank"> 
-                <img src={linkedin} alt="" />linkedin.com/in/alan-felipe
-                </a>
-            </div>
+                    <a href="https://www.linkedin.com/in/alan-felipe-3666b3220" target="_blank" className="contact-item">
+                        <img src={linkedin} alt="LinkedIn" />
+                        <span>linkedin.com/in/alan-felipe</span>
+                    </a>
 
-            <div className="github-contact">
-                <a href="https://github.com/AlanFelipeM" target="_blank"> 
-                <img src={github} alt="" />github.com/AlanFelipeM
-                </a>
-            </div>
+                    <a href="https://github.com/AlanFelipeM" target="_blank" className="contact-item">
+                        <img src={github} alt="GitHub" />
+                        <span>github.com/AlanFelipeM</span>
+                    </a>
+                </div>
+
+                <div className="assinatura">
+                    <hr />
+                    <p>{t('rodape')}</p>
+                </div>
+            </Container>
         </div>
-        </Container>
-        <div className="assinatura">       
-        <hr />   
-        <p>{t('rodape')}</p>
-        </div>  
-        </>
     )
 }

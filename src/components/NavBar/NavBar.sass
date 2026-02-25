@@ -1,110 +1,108 @@
-@use './src/styles/variables'
+@use '../../styles/variables'
 
 .Navbar
-  background-color: variables.$navbar-color
+  background-color: variables.$navbar-color !important
+  backdrop-filter: blur(15px)
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05)
+  transition: all 0.3s ease
+  padding: 0.8rem 0
 
-.logo2
-  color: variables.$secondary-text
-  font-size: 25px
+.logo
+  color: variables.$secondary-text !important
+  font-size: 1.8rem !important
   font-family: 'Roboto' 
   font-weight: 700
-
-.Navbar .logo
-  color: variables.$secondary-text
-  font-size: 30px
-  font-family: 'Roboto' 
-  font-weight: 700
-
-.Navbar .logo:hover
-  color: #40989e 
-  cursor: pointer
+  transition: color 0.3s ease
+  
+  &:hover
+    color: #40989e !important
+    cursor: pointer
 
 .navlink
-  color: variables.$primary-text
-  margin-left: 10px
-  margin-right: 15px
+  color: variables.$primary-text !important
+  margin: 0 1rem
   position: relative
-  padding-bottom: 0
+  font-weight: 500
+  opacity: 0.8
+  transition: all 0.3s ease
+  text-decoration: none
+  
+  &:hover, &.active
+    opacity: 1
+    color: variables.$secondary-text !important
 
-.navlink:hover
-  color: #ffffffad
+  &::after
+    content: ""
+    width: 0%
+    height: 2px
+    background-color: variables.$secondary-text
+    position: absolute
+    bottom: -5px
+    left: 0
+    transition: 0.3s ease-in-out
 
-.navlink::after
-  content: ""
-  width: 0%
-  height: 1px
-  background-color: variables.$secondary-text
-  position: absolute
-  bottom: 0
-  left: 0
-  transition: 0.3s ease-in-out
-
-.navlink:hover::after
-  width: 100%
+  &:hover::after, &.active::after
+    width: 100%
 
 .offcanvas
-  background-color: #09091694
+  background-color: rgba(9, 9, 22, 0.95) !important
+  backdrop-filter: blur(10px)
 
 .btn-close
-  background-color: #4EC9D1
+  background-color: #4EC9D1 !important
 
 .language-toggle
   position: relative
-  width: 85px
-  height: 35px
-  background-color: #36353559
-  border-radius: 30px
+  width: 80px
+  height: 32px
+  background: rgba(255, 255, 255, 0.05)
+  border-radius: 20px
   display: flex
   align-items: center
   justify-content: space-between
-  padding: 5px
+  padding: 4px
   cursor: pointer
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.527)
-  transition: background-color 0.3s
+  border: 1px solid rgba(255, 255, 255, 0.1)
+  transition: all 0.3s ease
+  
+  &:hover
+    background: rgba(255, 255, 255, 0.1)
 
 .flag
-  width: 31px
-  height: 31px
-  transition: filter 0.3s, transform 0.3s
-
-.flag.brazil
-  filter: grayscale(100%)
-
-.flag.usa
-  filter: grayscale(100%)
-
-.flag.active
-  filter: none
+  width: 24px
+  height: 24px
+  z-index: 2
+  transition: all 0.3s ease
+  &.brazil, &.usa
+    filter: grayscale(100%)
+  &.active
+    filter: none
+    transform: scale(1.1)
 
 .toggle-switch
   position: absolute
   top: 2px
   left: 2px
-  width: 26px
-  height: 26px
-  
+  width: 28px
+  height: 28px
+  background: variables.$secondary-text
   border-radius: 50%
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
-  transition: transform 0.3s
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+  z-index: 1
+  opacity: 0.2
 
 .language-toggle.on .toggle-switch
-  transform: translateX(30px)
-
-.language-toggle.on .flag.brazil
-  filter: grayscale(100%)
-
-.language-toggle.on .flag.usa
-  filter: none
+  transform: translateX(45px)
 
 .language-toggle.off .toggle-switch
   transform: translateX(0)
 
-.language-toggle.off .flag.brazil
-  filter: none
-
-.language-toggle.off .flag.usa
-  filter: grayscale(100%)
-
 @media(max-width: 767px)
-  .nav-link
-    padding-top: 40px
+  .Navbar
+    padding: 1rem 0
+  
+  .navlink
+    display: block
+    padding: 1rem 0
+    margin: 0
+    font-size: 1.2rem

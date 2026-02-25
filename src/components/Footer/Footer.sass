@@ -1,63 +1,69 @@
-@use './src/styles/variables'
+@use '../../styles/variables'
 
-.contact-title
-    padding-top: 4rem
+.contact-section
+    min-height: 60vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 4rem 0
+    position: relative
+    overflow: hidden
 
-.contact
+.contact-container
+    position: relative
+    text-align: center
+
+
+.contact-grid
     display: flex
     align-items: center
     justify-content: center
-    padding-top: 18px
-    
-.linkedin-contact
-    margin-left: 30px
+    gap: 3rem
+    margin-top: 3rem
+    flex-wrap: wrap
 
+    a
+        display: flex
+        align-items: center
+        gap: 12px
+        text-decoration: none
+        color: variables.$primary-text
+        font-size: 1.1rem
+        padding: 1rem 1.5rem
+        background: rgba(23, 23, 48, 0.4)
+        backdrop-filter: blur(10px)
+        border-radius: 12px
+        border: 1px solid rgba(255, 255, 255, 0.05)
+        transition: all 0.3s ease
 
-.github-contact
-    margin-left: 30px
+        img
+            width: 24px
+            height: 24px
 
-.contact a
-    text-decoration: none
-    text-align: center
-    color: variables.$primary-text
-
-.contact a:hover
-    color: #ffffffb0
+        &:hover
+            transform: translateY(-5px)
+            border-color: variables.$secondary-text
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2)
+            color: variables.$secondary-text
 
 .assinatura
-    color: variables.$primary-text
+    margin-top: 4rem
+    padding: 2rem 0
+    color: variables.$tertiary-text
     text-align: center
-
-@media(max-width: 1000px)
-    .contact img
-        width: 30px
-
-    .assinatura
-        font-size: 15px
-
-
-@media(max-width: 768px)
-    .linkedin-contact
-        margin-left: 0px
-
-    .github-contact
-        margin-left: 0px
-
-    .contact
-        display: block
-        justify-content: center
-        width: 12rem
-        margin: auto
-
-    .linkedin-contact
-        padding-top: 2rem
+    font-size: 1rem
     
-    .github-contact
-        padding-top: 2rem
+    hr
+        border: none
+        border-top: 1px solid rgba(255, 255, 255, 0.05)
+        margin-bottom: 2rem
 
-@media(max-width: 600px)
-    .assinatura 
-        font-size: 12px
-        width: auto
-    
+@media (max-width: 768px)
+    .contact-grid
+        flex-direction: column
+        gap: 1.5rem
         
+        a
+            width: 100%
+            max-width: 320px
+            justify-content: center

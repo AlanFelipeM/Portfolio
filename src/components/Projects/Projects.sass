@@ -1,27 +1,41 @@
-@use './src/styles/variables'
-  
-.ver-mais
-  margin-top: 90px
-  text-align: center
+@use '../../styles/variables'
 
+.projects-page
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    padding: 6rem 0
+    position: relative
+    overflow: hidden
+
+.projects-container
+    position: relative
+
+
+.projects-grid
+    margin-top: 4rem
+    display: flex
+    flex-direction: column
+    gap: 6rem
+
+.ver-mais
+    margin-top: 6rem
+    text-align: center
+    padding-bottom: 4rem
 
 .button-vermais
-  text-decoration: none
-  justify-content: center
-  position: relative
-  padding: 6.5px 45px
-  font-size: 20px
-  font-weight: 400
-  color: variables.$primary-text
-  border: 1px solid variables.$secondary-text
-  border-radius: 20px
-  overflow: hidden
-  cursor: pointer
-  transition: all 0.4s ease-in-out
+    text-decoration: none
+    padding: 1rem 3rem
+    border-radius: 30px
+    background: transparent
+    color: variables.$secondary-text
+    border: 2px solid variables.$secondary-text
+    font-weight: 600
+    font-size: 1.1rem
+    transition: all 0.3s ease
 
-
-.button-vermais:hover
-  box-shadow: 0 0 13px variables.$secondary-text, inset 0 0 13px variables.$secondary-text
-  text-shadow: 0 0 13px variables.$primary-text
-  
-
+    &:hover
+        background: variables.$secondary-text
+        color: variables.$primary-text
+        box-shadow: 0 0 20px rgba(78, 201, 209, 0.3)
+        transform: translateY(-3px)

@@ -1,0 +1,81 @@
+.terminal-window
+  background: #1e1e1e
+  border-radius: 8px
+  overflow: hidden
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5)
+  font-family: 'Fira Code', 'Courier New', Courier, monospace
+  font-size: 14px
+  width: 100%
+  max-width: 600px
+  margin: 2rem auto
+  border: 1px solid #333
+
+.terminal-header
+  background: #323233
+  padding: 8px 12px
+  display: flex
+  align-items: center
+  gap: 12px
+
+  .buttons
+    display: flex
+    gap: 8px
+    .dot
+      width: 12px
+      height: 12px
+      border-radius: 50%
+      &.red
+        background: #ff5f56
+      &.yellow
+        background: #ffbd2e
+      &.green
+        background: #27c93f
+
+  .title
+    color: #9da5b4
+    font-size: 12px
+    flex-grow: 1
+    text-align: center
+
+.terminal-body
+  padding: 15px
+  height: 300px
+  overflow-y: auto
+  color: #cccccc
+  scrollbar-width: thin
+  scrollbar-color: #333 #1e1e1e
+
+  &::-webkit-scrollbar
+    width: 6px
+  &::-webkit-scrollbar-thumb
+    background: #333
+    border-radius: 10px
+
+.terminal-line
+  margin-bottom: 4px
+  line-height: 1.4
+
+  &.command
+    color: #61afef
+    font-weight: bold
+  &.info
+    color: #abb2bf
+  &.success
+    color: #98c379
+  &.request
+    color: #d19a66
+  &.muted
+    color: #5c6370
+
+.cursor-line
+  display: flex
+  gap: 8px
+  .prompt
+    color: #98c379
+  .cursor
+    color: #61afef
+    animation: blink 1s step-end infinite
+
+@keyframes blink
+  50%
+    opacity: 0

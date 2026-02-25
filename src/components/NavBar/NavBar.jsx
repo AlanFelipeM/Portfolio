@@ -2,8 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { Link } from 'react-scroll';
-import Button from 'react-bootstrap/Button';
+import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import brasil from '/src/img/icon-br.png'
 import eua from '/src/img/icon-eua.png'
@@ -16,9 +15,7 @@ export default function NavBar({ handleChangeLanguage, currentLanguage }) {
       {['md'].map((expand) => (
         <Navbar sticky="top" key={expand} expand={expand} className="Navbar" data-bs-theme="dark">
           <Container>
-            <Link to="Home" smooth={true} duration={1000}>
-              <Navbar.Brand className="logo">/*Alan Dev*/</Navbar.Brand>
-            </Link>
+            <Navbar.Brand as={NavLink} to="/" className="logo">/*Alan Dev*/</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               className="offcanvas"
@@ -33,21 +30,10 @@ export default function NavBar({ handleChangeLanguage, currentLanguage }) {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Link to="Home" smooth={true} duration={1000}>
-                    <Nav.Link className="navlink">Home</Nav.Link>
-                  </Link>
-                  <Link to="About" smooth={true} duration={1000}>
-                    <Nav.Link className="navlink">{t('sobre')}</Nav.Link>
-                  </Link>
-                  <Link to="Skills" smooth={true} duration={1000}>
-                    <Nav.Link className="navlink">{t('habilidades')}</Nav.Link>
-                  </Link>
-                  <Link to="Projects" smooth={true} duration={1000}>
-                    <Nav.Link className="navlink">{t('projetos')}</Nav.Link>
-                  </Link>
-                  <Link to="Contact" smooth={true} duration={1000}>
-                    <Nav.Link className="navlink">{t('contato')}</Nav.Link>
-                  </Link>
+                  <Nav.Link as={NavLink} to="/" className="navlink" end>Home</Nav.Link>
+                  <Nav.Link as={NavLink} to="/about" className="navlink">{t('sobre')}</Nav.Link>
+                  <Nav.Link as={NavLink} to="/skills" className="navlink">{t('habilidades')}</Nav.Link>
+                  <Nav.Link as={NavLink} to="/projects" className="navlink">{t('projetos')}</Nav.Link>
 
                   <div
                     className={`language-toggle ${currentLanguage === 'en' ? 'on' : 'off'}`}

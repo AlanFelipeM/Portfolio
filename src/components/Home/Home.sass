@@ -1,237 +1,136 @@
-@use './src/styles/variables'
+@use '../../styles/variables'
 
-.home
+
+.home-page
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 2rem 0
+    position: relative
+    overflow: hidden
+
+.home-container
+    flex: 1
+    display: flex
+    flex-direction: column
+    gap: 4rem
+    position: relative
+
+
+.home-content
     display: flex
     align-items: center
-    margin-top: 4rem
+    justify-content: space-between
+    gap: 2rem
+    margin-top: 2rem
 
-.arrowdown
-    width: 90px
-    margin-top: 6rem
-    cursor: pointer
+    @media (max-width: 992px)
+        flex-direction: column-reverse
+        text-align: center
+
+.hero-text
+    flex: 1
+    h3
+        color: variables.$primary-text
+        font-size: 1.5rem
+        margin-bottom: 0.5rem
+    h1
+        font-size: 4.5rem
+        color: variables.$secondary-text
+        margin-bottom: 1rem
+        @media (max-width: 768px)
+            font-size: 3rem
+    h3:last-of-type
+        margin-top: 1rem
+
+.hero-visual
+    flex: 0 0 auto
+    .avatar
+        width: 500px
+        height: auto
+        object-fit: contain
+        @media (max-width: 992px)
+            width: 400px
+        @media (max-width: 576px)
+            width: 300px
 
 
-.avatar
-    width: 40rem
-    margin-left: auto
-    justify-content: center
-    
 
 .links
     display: flex
-    margin-top: 5rem
+    gap: 2rem
+    margin-top: 2rem
+    @media (max-width: 992px)
+        justify-content: center
 
+    .btn-github, .btn-linkedin
+        a
+            display: flex
+            align-items: center
+            gap: 8px
+            text-decoration: none
+            color: variables.$tertiary-text
+            transition: color 0.3s ease
+            &:hover
+                color: variables.$secondary-text
+        img
+            width: 24px
 
-.links .btn-github a
-    padding-left: 7px
-    color: variables.$tertiary-text
-
-
-.links .btn-github a:hover
-    color: variables.$secondary-text
-
-.links .btn-github img
-    padding-bottom: 8px
-
-.links .btn-linkedin img
-    padding-bottom: 10px
-
-.links .btn-linkedin a
-    
-    color: variables.$tertiary-text
-
-.links .btn-linkedin a:hover
-    color: variables.$secondary-text
-
-.btn-linkedin
-    margin-left: 80px
-
- 
-.home1 h3
-    color: variables.$primary-text
-
-.home1 h1
-    font-size: 80px
-    width: 27rem
-    color: variables.$secondary-text
-
-.home1 a
-    text-decoration: none
-    color: variables.$primary-text
-
-.home1 a:active
-    color: #948f8fd3
-
-.home1 a:active:after
-    color: #fff
-
-.home1 button
-    font-size: 23px
-    margin-top: 60px
-    margin-left: 20px
-    width: 220px
-    height: 50px
+.button-cv
+    margin-top: 3rem
+    padding: 0.8rem 2rem
+    font-size: 1.2rem
     border: none
-    outline: none
+    border-radius: 8px
+    background: rgba(9, 9, 22, 0.4)
+    border: 1px solid rgba(255, 255, 255, 0.1)
     color: variables.$primary-text
-    background: variables.$navbar-color
     cursor: pointer
     position: relative
-    z-index: 0
-    border-radius: 10px
+    transition: all 0.3s ease
+    z-index: 1
+    backdrop-filter: blur(5px)
 
-.home1 button:before
-    content: ''
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000)
-    position: absolute
-    top: -2px
-    left:-2px
-    background-size: 400%
-    z-index: -1
-    filter: blur(5px)
-    width: calc(100% + 4px)
-    height: calc(100% + 4px)
-    animation: glowing 20s linear infinite
-    opacity: 0
-    transition: opacity .3s ease-in-out
-    border-radius: 10px
+    a
+        text-decoration: none
+        color: inherit
 
-.home1 button:active
-    color: #948f8fd3
+    &::before
+        content: ''
+        background: linear-gradient(90deg, #00ffd5, #7a00ff)
+        position: absolute
+        top: -2px
+        left: -2px
+        right: -2px
+        bottom: -2px
+        z-index: -1
+        filter: blur(15px)
+        opacity: 0
+        border-radius: 8px
+        transition: opacity 0.3s ease
+        
+    &:hover
+        transform: translateY(-2px)
+        border-color: rgba(0, 255, 213, 0.5)
+        &::before
+            opacity: 1
 
-.home1 button:active:after
-    color: #fff
+.arrowdown
 
-.home1 button:hover:before
-    opacity: 1
-
-.home1 button:after
-    z-index: -1
-    content: ''
-    position: absolute
-    width: 100%
-    height: 100%
-    background: #171730ef
-    left: 0
-    top: 0
-    border-radius: 10px
+    width: 60px
+    margin-top: 2rem
+    cursor: pointer
+    opacity: 0.7
+    transition: opacity 0.3s ease
+    &:hover
+        opacity: 1
 
 @keyframes glowing
     0%
-        background-position: (0 0)
+        background-position: 0 0
     50%
-        background-position: (400% 0)
+        background-position: 400% 0
     100%
-        background-position: (0 0)
-    
-@media(max-width: 1200px)
-    .avatar
-        width: 100%
-        margin-left: auto
-        justify-content: center
+        background-position: 0 0
 
-@media(max-width: 1300px)
-    .avatar
-        width: 45rem
-        margin-left: auto
-        justify-content: center
-
-@media(max-width: 1205px)
-    .avatar
-        width: 35rem
-        margin-left: auto
-        justify-content: center
-
-@media(max-width: 1070px)
-    .avatar
-        width: 30rem
-        margin-left: auto
-        justify-content: center
-
-@media(max-width: 1020px)
-    .home
-        padding-top: 1.5rem
-
-    .home h3
-        font-size: 20px
-
-    .home h1
-        font-size: 60px
-
-@media(max-width: 1000px)
-    .avatar
-        width: 23rem
-        margin-left: auto
-        justify-content: center
-
-    .linkedin
-        width: 30px
-
-    .github
-        width: 32px
-
-    .home button
-        width: 150px
-    
-    .home button a
-        font-size: 16px
-
-@media(max-width: 910px)
-    .avatar
-        width: 20rem
-        margin-left: auto
-        justify-content: center
-        
-@media(max-width: 814px)
-    .home
-        display: block
-
-    .home1
-        margin-left: 15rem
-
-    .avatar
-        margin-left: 5rem
-        width: 35rem
-
-    .links a
-        font-size: 16px
-
-    .links img
-        width: 40px
-
-    .home button
-        width: 200px
-    
-    .home button a
-        font-size: 19px
-
-
-@media(max-width: 814px)
-    .avatar
-        margin: auto
-        width: 100%
-
-    .home1
-        width: 17rem
-        margin: auto
-
-@media(max-width: 814px)
-    .home1
-        width: 13rem
-        margin: auto
-
-    .home1 h1
-        font-size: 50px
-        width: 17rem
-
-@media(max-width: 814px)
-    .home1 h1
-        font-size: 45px
-        width: 15rem
-
-@media(max-width: 803px)
-    .links .btn-github img
-        padding: 0px
-
-    .links .btn-linkedin img
-        padding: 0px
