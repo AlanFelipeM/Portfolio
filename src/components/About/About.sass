@@ -1,94 +1,90 @@
-@use './src/styles/variables'
- 
-.about
+@use '../../styles/variables'
+
+.about-page
+    min-height: 100vh
     display: flex
     align-items: center
-    padding-top: 150px
-    
-.txt-about
-    width: 43rem
+    padding: 6rem 0
+    position: relative
+    overflow: hidden
 
-.txt-about h2
-    text-indent: 20px
-    font-weight: 200
-    font-size: 3.7rem
-    color: variables.$secondary-text
-    
-.txt-about p 
-    text-indent: 20px
-    color: variables.$primary-text
-
-.saying p
-    padding-top: 30px
-    text-indent: 20px
-    font-weight: 300
-    color: variables.$tertiary-text  
-
-.txt-about span
-    color: variables.$secondary-text
-
-.ass
-    margin-left: 38rem
-    font-weight: 300
-
-.eu
-    width: 26rem
-    margin-left: auto
-    justify-content: center
+.about-container
+    position: relative
 
 
-@media(max-width: 1200px)
-    .eu
-        width: 27rem
-        margin-left: auto
-        justify-content: center
+.about-content
+    display: flex
+    align-items: center
+    gap: 4rem
+    margin-top: 3rem
 
-@media(max-width: 1205px)
-    .eu
-        width: 17rem
-        margin-left: auto
-        justify-content: center
+    @media (max-width: 992px)
+        flex-direction: column
+        text-align: center
 
-    .ass
-        margin-left: auto
+.about-text-card
+    flex: 1
+    background: rgba(23, 23, 48, 0.4)
+    backdrop-filter: blur(10px)
+    padding: 3rem
+    border-radius: 20px
+    border: 1px solid rgba(255, 255, 255, 0.05)
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2)
 
-@media(max-width: 1075px)
-    .eu
-        width: 17rem
-        margin-left: auto
-        justify-content: center
+    h2
+        color: variables.$secondary-text
+        font-size: 2.5rem
+        margin-bottom: 2rem
+        font-weight: 700
 
+    .description
+        p
+            color: variables.$primary-text
+            font-size: 1.1rem
+            line-height: 1.8
+            margin-bottom: 1.5rem
+            opacity: 0.9
 
-@media(max-width: 1000px)
-    .about
-        justify-content: center
-        
-        
-@media(max-width: 768px)
-    .txt-about
-        width: auto
+.quote-section
+    margin-top: 3rem
+    padding-top: 2rem
+    border-top: 1px solid rgba(255, 255, 255, 0.05)
 
-    .about
+    .quote
+        font-style: italic
+        font-size: 1.2rem
+        color: variables.$tertiary-text
+        span
+            color: variables.$secondary-text
+            font-size: 1.5rem
+            font-weight: bold
+            margin: 0 0.5rem
+
+    .author
         display: block
-    
-    .eu
-        width: 25rem
-        margin: auto
-   
-@media(max-width: 615px)
-    .eu
-        display: none
-    
-    .about
-        padding-top: 7rem    
-    
-    .saying
-        padding-top: 1.5rem
-       
-@media(max-width: 428px)
-    .txt-about p 
-        width: 25.5rem
+        margin-top: 1rem
+        color: variables.$secondary-text
+        font-weight: 600
+        opacity: 0.8
 
-@media(max-width: 427px)
-    .txt-about p
-        width: auto
+.about-visual
+    flex: 0 0 auto
+    .image-wrapper
+        position: relative
+
+    .profile-image
+        width: 350px
+        height: auto
+        max-height: 500px
+        object-fit: contain
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2)
+        transition: transform 0.3s ease
+
+        &:hover
+            transform: scale(1.02)
+
+
+        @media (max-width: 576px)
+            width: 100%
+            max-width: 300px
+            height: auto

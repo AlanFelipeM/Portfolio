@@ -5,27 +5,36 @@ import { useTranslation } from 'react-i18next';
 
 import '../About/About.sass'
 
-export default function About () {
+export default function About() {
     const { t } = useTranslation();
 
-    return(
-        <>
-        <div className='pdr pdr1'>
-        <Container>
-        <h1 className='title'>{t('tituloSobre')}</h1>
-        <div className="about">
-        <div className='txt-about'>
-        <h2>{t('sobre1')}</h2>
-        <p>{t('sobre2')} <br/>&nbsp;&nbsp;&nbsp;{t('sobre3')}</p>
-        <div className='saying'>
-        <p><i><span>"  </span>{t('ditado')}<span>  "</span></i></p>
-        <span className='ass'><i>-Bill Gates</i></span>
+    return (
+        <div className='about-page'>
+            <Container className="about-container">
+                <h1 className='title'>// {t('tituloSobre')}</h1>
+                <div className="about-content">
+                    <div className='about-text-card'>
+                        <h2>{t('sobre1')}</h2>
+                        <div className="description">
+                            <p>{t('sobre2')}</p>
+                            <p>{t('sobre3')}</p>
+                            <p>{t('sobre4')}</p>
+                        </div>
+
+                        <div className='quote-section'>
+                            <p className="quote">
+                                <span>"</span>{t('ditado')}<span>"</span>
+                            </p>
+                            <span className='author'>- Bill Gates</span>
+                        </div>
+                    </div>
+                    <div className='about-visual'>
+                        <div className="image-wrapper">
+                            <img className='profile-image' src={foto} alt="Alan Felipe" />
+                        </div>
+                    </div>
+                </div>
+            </Container>
         </div>
-        </div>
-        <img className='eu' src={foto} alt="eu" />
-        </div>
-        </Container>
-        </div>
-        </>
     )
 }
