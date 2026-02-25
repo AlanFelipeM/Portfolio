@@ -7,9 +7,7 @@ import select from '/src/img/vexeltech.png'
 import gofix from '/src/img/gofix.png'
 import estoque from '/src/img/estoque.png'
 import Modalvideo from '../Modal/Modalvideo';
-import Modalvideo2 from '../Modal/Modalvideo2'
 import Modalvideo3 from '../Modal/Modalvideo3'
-import Modalvideo4 from '../Modal/Modalvideo4'
 import { useTranslation } from 'react-i18next';
 
 import '../Projects/Projects.sass'
@@ -20,17 +18,9 @@ export default function Projects() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const [show2, setShow2] = useState(false);
-    const handleClose2 = () => setShow2(false);
-    const handleShow2 = () => setShow2(true);
-
     const [show3, setShow3] = useState(false);
     const handleClose3 = () => setShow3(false);
     const handleShow3 = () => setShow3(true);
-
-    const [show4, setShow4] = useState(false);
-    const handleClose4 = () => setShow4(false);
-    const handleShow4 = () => setShow4(true);
 
     const { t } = useTranslation();
 
@@ -94,9 +84,7 @@ export default function Projects() {
                 </div>
 
                 <Modalvideo show={show} handleClose={handleClose} />
-                <Modalvideo2 show2={show2} handleClose2={handleClose2} />
                 <Modalvideo3 show3={show3} handleClose3={handleClose3} />
-                <Modalvideo4 show4={show4} handleClose4={handleClose4} />
             </Container>
         </div>
     )
