@@ -4,10 +4,9 @@ import Card from '../Card/Card'
 import Card2 from '../Card/Card2'
 import alanx from '/src/img/alanx.png'
 import select from '/src/img/vexeltech.png'
-import gofix from '/src/img/gofix.png'
-import estoque from '/src/img/estoque.png'
+import agb from '/src/img/AGB.png'
+import rcn from '/src/img/RCN.png'
 import Modalvideo from '../Modal/Modalvideo';
-import Modalvideo3 from '../Modal/Modalvideo3'
 import { useTranslation } from 'react-i18next';
 
 import '../Projects/Projects.sass'
@@ -18,9 +17,6 @@ export default function Projects() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const [show3, setShow3] = useState(false);
-    const handleClose3 = () => setShow3(false);
-    const handleShow3 = () => setShow3(true);
 
     const { t } = useTranslation();
 
@@ -55,27 +51,27 @@ export default function Projects() {
                     />
 
                     <Card
-                        event={handleShow3}
-                        img={estoque}
+                        event={null}
+                        img={rcn}
                         title={t('tituloprojeto3')}
-                        titletec1="HTML"
-                        titletec2="React"
-                        titletec3="Css"
+                        titletec1="WordPress"
+                        titletec2="PHP"
+                        titletec3="JavaScript"
                         abouttec={t('projeto3')}
-                        linkproject='https://gestor-estoque.netlify.app/'
-                        linkgit='https://github.com/AlanFelipeM/Gestor-de-Estoque'
+                        linkproject='https://www.ige.unicamp.br/rede-centro-norte-brasil/'
+                        linkgit={null}
                     />
 
                     <Card2
                         event={null}
-                        img={gofix}
+                        img={agb}
                         title={t('tituloprojeto4')}
-                        titletec1="Flutter"
-                        titletec2="Dart"
-                        titletec3=""
+                        titletec1="WordPress"
+                        titletec2="PHP"
+                        titletec3="Sass"
                         abouttec={t('projeto4')}
-                        linkproject='https://gofiix.netlify.app/'
-                        linkgit='https://github.com/AlanFelipeM'
+                        linkproject='https://agbcampinas.com.br/'
+                        linkgit={null}
                     />
                 </div>
 
@@ -84,7 +80,7 @@ export default function Projects() {
                 </div>
 
                 <Modalvideo show={show} handleClose={handleClose} />
-                <Modalvideo3 show3={show3} handleClose3={handleClose3} />
+
             </Container>
         </div>
     )

@@ -18,8 +18,8 @@ export default function Card2(props) {
                         </div>
                         <div className='text2'><p>{props.abouttec}</p></div>
                         <div className='links'>
-                            <a href={props.linkproject} target='_blank'><i>{t('linkProjeto')}</i></a>
-                            <a href={props.linkgit} target='_blank'><i>Link GitHub</i></a>
+                            {props.linkproject && <a href={props.linkproject} target='_blank'><i>{t('linkProjeto')}</i></a>}
+                            {props.linkgit && <a href={props.linkgit} target='_blank'><i>Link GitHub</i></a>}
                         </div>
                     </div>
                     <img className='img-card' src={props.img} alt="" onClick={props.event} />

@@ -3,7 +3,7 @@ import btngithub from '/src/img/mdi_github.png'
 import btnlinkedin from '/src/img/ri_linkedin-fill.png'
 import avatar from '/src/img/fotohome.png'
 
-import curriculo from '/src/img/Alan Felipe Bertoletti de Mário.pdf'
+import curriculo from '/src/img/ALAN FELIPE BERTOLETTI DE MÁRIO.pdf'
 import { useTypewriter } from 'react-simple-typewriter'
 import { Cursor } from 'react-simple-typewriter'
 import { useTranslation } from 'react-i18next';
